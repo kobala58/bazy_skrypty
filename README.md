@@ -21,27 +21,25 @@ Tools:
 Commands
 -----------
 
-Access monitor: `mysql -u [username] -p;` (will prompt for password)
+Podłączenie się do bazy: `mysql -u [username] -p;` (will prompt for password)
 
-Show all databases: `show databases;`
+Pokaż bazy: `show databases;`
 
-Access database: `mysql -u [username] -p [database]` (will prompt for password)
+Nowa baza: `create database [database];`
 
-Create new database: `create database [database];`
+Wybierz baze: `use [database];`
 
-Select database: `use [database];`
+Zdeterminuj którą bazę chcesz używać: `select database();`
 
-Determine what database is in use: `select database();`
+Pokaż tabele w aktualnej bazie: `show tables;`
 
-Show all tables: `show tables;`
+Pokaż sturkturę tabeli: `describe [table];`
 
-Show table structure: `describe [table];`
+Listuj wszystkie indexy w tabeli: `show index from [table];`
 
-List all indexes on a table: `show index from [table];`
+Utwóż nową tabelę z następującymi polami: `CREATE TABLE [table] ([column] VARCHAR(120), [another-column] DATETIME);`
 
-Create new table with columns: `CREATE TABLE [table] ([column] VARCHAR(120), [another-column] DATETIME);`
-
-Adding a column: `ALTER TABLE [table] ADD COLUMN [column] VARCHAR(120);`
+Dodawanie kolumny: `ALTER TABLE [table] ADD COLUMN [column] VARCHAR(120);`
 
 Adding a column with an unique, auto-incrementing ID: `ALTER TABLE [table] ADD COLUMN [column] int NOT NULL AUTO_INCREMENT PRIMARY KEY;`
 
