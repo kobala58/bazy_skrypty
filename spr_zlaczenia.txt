@@ -1,0 +1,17 @@
+4.a)
+SELECT Tytul,Gatunek FROM filmy WHERE Gatunek = "SF"
+
+4.b)
+SELECT filmy.Tytul,rezyserzy.Nazwisko FROM filmy,rezyserzy WHERE rezyserzy.IDRezyser = filmy.RezyserID;
+
+SELECT filmy.Tytul , rezyserzy.Nazwisko FROM filmy INNER JOIN rezyserzy ON rezyserzy.IDRezyser = filmy.RezyserID
+
+4.c)
+SELECT recenzje.Ocena,recenzje.Recenzent,filmy.Tytul FROM recenzje,filmy WHERE recenzje.IDRecenzja=filmy.RecenzjaID AND recenzje.Ocena = 4
+
+SELECT recenzje.Ocena,recenzje.Recenzent,filmy.Tytul FROM recenzje INNER JOIN filmy ON recenzje.IDRecenzja=filmy.RecenzjaID AND recenzje.Ocena = 4
+
+4.d)
+SELECT filmy.Tytul,rezyserzy.Nazwisko,recenzje.Tresc FROM filmy,rezyserzy,recenzje WHERE filmy.RezyserID=rezyserzy.IDRezyser AND filmy.RecenzjaID=recenzje.IDRecenzja AND recenzje.Tresc='Ciekawy'
+
+SELECT filmy.Tytul,rezyserzy.Nazwisko,recenzje.Tresc FROM filmy INNER JOIN rezyserzy ON filmy.RezyserID=rezyserzy.IDRezyser INNER JOIN recenzje ON filmy.RecenzjaID=recenzje.IDRecenzja AND recenzje.Tresc='Ciekawy'
